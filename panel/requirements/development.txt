@@ -1,0 +1,6 @@
+-r test.txt
+flask-debugtoolbar
+
+# This help me to monitor scheduler testing
+# Reset queue stats
+rq-scheduler-dashboard==0.0.2

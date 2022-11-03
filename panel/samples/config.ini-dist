@@ -1,0 +1,110 @@
+[manager]
+user = username
+password = password
+port = 5038
+host = localhost
+
+[general]
+debug = False
+port = 5000
+host = 0.0.0.0
+;Interval for request update in seconds
+interval = 5
+
+; Hide queue on monitor separate by comma.
+; Example config hide=queue1,queue2
+;hide =
+
+; Add queue what you required to show.
+; Example show=queue1,otherqueuename.
+;show =
+
+;This option override the hide parameter
+;base_url =  ; Default is /
+
+; is a good idea change this value
+;secret_key = 'PLEASE_CHANGE_ME'
+
+language = en
+check_upgrade = True
+
+; Use FreeSWITCH as backend. Use mod_callcenter
+;freeswitch = True
+
+; Show information of service level of a queue
+show_service_level = False
+
+
+; Theme setting available to set the design how is showing Qpanel
+; Available configuration
+;'old', 'qpanel'.
+; The old theme is deprecated from 0.16.0 and not keep maintained anymore.
+; In the future will be removed by completely.
+;theme = qpanel
+
+; external script to return json array for queue enables
+;external_login = http://localhost/resources/qpanel.php
+
+[rename]
+; This section if for rename name of queue
+; Example:
+;5000 = support. This rename queue "5000"  by "support"
+
+[users]
+; add user and password
+; example
+;username = password
+
+;; Give access to the specific queue for a determined user
+;; The name to use for the queue consider the rename name
+[user_queues]
+;rodrigo = support, commercial
+
+
+;; Config for Freeswitch
+;[freeswitch]
+;host = 127.0.0.1
+;port = 8021
+;password = ClueCon
+
+;; Reset stats
+;; namequeue = when,hour
+;; when can by daily, weekly, monthly, sun, mon, tue, wed, thu, fri or sat
+[reset_stats]
+;queuename = daily,00:00:00
+
+
+
+; Configuration for queue_log database for the adapter setting
+; need extra other dependencies if you use
+; MySQL or PostreSQL
+;
+; MySQL
+; =====
+;
+; pip install -r requirements/dbs/mysql.txt
+; https://pypi.org/project/mysqlclient/
+;
+; For to build the mysqlclient you need the have installed before
+; in the system the dependencies for MySQL Client Devel.
+;
+;  Debian / Ubuntu
+;    sudo apt-get install python-dev default-libmysqlclient-dev
+;
+;  Red Hat / CentOS
+;    sudo yum install python-devel mysql-devel
+;
+;
+; PostgreSQL
+; ==========
+; pip install -r requirements/dbs/postgresql.txt
+;
+
+;[queue_log]
+;database = asterisk
+;table = queue_log
+;host = localhost
+;user = user
+;password = changeme
+;port = 5432
+;adapter = postgres

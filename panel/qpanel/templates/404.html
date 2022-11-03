@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+    {% block title %} {{ _('Not found') }}   {% endblock %}
+    {% block main %}
+      <!--main content start-->
+      <section id="main-content">
+          <section class="wrapper site-min-height centered">
+            <h1><i class="fa fa-angle-right"></i> {{ _('404 Not Found') }}</h1>
+            <div class="row mt">
+                <div class="col-lg-12">
+                <h2>{{ _('The request the was not found on this server.') }}</h2>
+                </div>
+        </section><!--/wrapper -->
+      </section><!-- /MAIN CONTENT -->
+      <!--main content end-->
+    {% endblock %}
+  </body>
+</html>
